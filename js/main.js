@@ -33,7 +33,7 @@ function loadProjects() {
                     <h5 class="card-title">${project.title}</h5>
                     <p class="card-text">${project.description}</p>
                     <a href="${project.link}" class="btn btn-outline-primary">
-                        <i class="bi bi-telegram"></i> Читать в ТГК
+                        <i class="bi bi-telegram"></i> Играть
                     </a>
                 </div>
             </div>
