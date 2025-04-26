@@ -1,0 +1,28 @@
+/* Windows */
+.windows body {
+  font-family: 'Segoe UI', sans-serif;
+  scrollbar-width: thin;
+}
+
+/* macOS */
+.mac body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Android */
+.android body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* iOS */
+.ios body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Автоопределение ОС */
+@media not all and (pointer: coarse) {
+  body {
+      background-color: #f8f9fa !important;
+  }
+}
