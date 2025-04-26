@@ -13,16 +13,10 @@ document.body.classList.add(detectOS());
 // Загрузка проектов из ТГК (имитация)
 const projects = [
     {
-        title: "Споритики: Игра",
-        description: "Бегите от существ без лиц в этой психоделической игре",
-        image: "https://via.placeholder.com/400x200?text=Споритики",
-        link: "https://t.me/your_channel/123"
-    },
-    {
-        title: "Форточка в Кошмар",
-        description: "Интерактивная история про папашу в трусах",
-        image: "https://via.placeholder.com/400x200?text=Форточка",
-        link: "https://t.me/your_channel/456"
+        title: "Voice Game (Rb)",
+        description: "Играйте, общайтесь, развлекайтесь.",
+        image: "https://tr.rbxcdn.com/180DAY-b48c003e7a60b6794ea1e122faa86789/768/432/Image/Webp/noFilter",
+        link: "https://www.roblox.com/games/10095591734/Voice-Game"
     }
 ];
 
