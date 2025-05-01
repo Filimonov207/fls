@@ -181,6 +181,21 @@
         window.addEventListener('DOMContentLoaded', () => {
             loadProjects();
         });
+
+                // Сохранение темы
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            localStorage.setItem('darkTheme', isDark);
+        });
+        
+        // Загрузка темы при старте
+        window.addEventListener('DOMContentLoaded', () => {
+            const isDark = localStorage.getItem('darkTheme') === 'true';
+            if (isDark) {
+                document.body.classList.add('dark-theme');
+            }
+        });
     </script>
 </body>
 </html>
