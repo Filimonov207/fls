@@ -6,62 +6,187 @@
     <title>FStudio | Проекты</title>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Стили под ОС -->
-    <link rel="stylesheet" href="css/os-theme.css">
     <!-- Иконки -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Стили -->
+    <style>
+        /* Общие стили */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Шапка */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Кнопки */
+        .btn-apple {
+            background-color: #0071e3;
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-apple:hover {
+            background-color: #005bb5;
+        }
+
+        /* Карточки проектов */
+        .project-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Описание */
+        .description-section {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: rgba(245, 245, 247, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6e6e73;
+        }
+    </style>
 </head>
 <body>
     <!-- Шапка -->
-    <header class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <h1 class="mb-0">
-                    <i class="bi bi-code-slash"></i> FSTUDIO
-                </h1>
-                <a href="https://t.me/fchannel207" class="btn btn-outline-light">
-                    <i class="bi bi-telegram"></i> Наш ТГК
-                </a>
-            </div>
+    <header class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>FSTUDIO</h1>
+            <a href="https://t.me/fchannel207" class="btn btn-apple">
+                <i class="bi bi-telegram"></i> Наш ТГК
+            </a>
         </div>
     </header>
 
     <!-- Основной контент -->
-<main class="container">
-    <!-- Последние проекты -->
-    <section>
-        <h2 class="text-center mb-5">ПОСЛЕДНИЕ ПРОЕКТЫ</h2>
-        <div class="row row-cols-1 row-cols-md-2 g-4" id="projects-container">
-            <!-- Проекты будут загружаться здесь -->
-        </div>
-    </section>
+    <main class="container">
+        <!-- Последние проекты -->
+        <section>
+            <h2 class="text-center mb-5">ПОСЛЕДНИЕ ПРОЕКТЫ</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4" id="projects-container">
+                <!-- Проекты будут загружаться здесь -->
+            </div>
+        </section>
 
-    <!-- Описание -->
-    <section class="description-section rounded-3">
-        <h3>О ПРОЕКТЕ</h3>
-        <p class="lead">
-            Добро пожаловать в официальный веб-хаб FStudio. Здесь собраны все наши творческие эксперименты.
-        </p>
-        <div class="mt-3">
-            <a href="https://t.me/your_channel" class="btn btn-apple me-2">
-                <i class="bi bi-telegram"></i> Подписаться
-            </a>
-            <button class="btn btn-outline-secondary" id="theme-toggle">
-                <i class="bi bi-moon-stars"></i> Тема
-            </button>
-        </div>
-    </section>
-</main>
+        <!-- Описание -->
+        <section class="description-section rounded-3">
+            <h3>О ПРОЕКТЕ</h3>
+            <p class="lead">
+                Добро пожаловать в официальный веб-хаб FStudio. Здесь собраны все наши творческие эксперименты.
+            </p>
+            <div class="mt-3">
+                <a href="https://t.me/your_channel" class="btn btn-apple me-2">
+                    <i class="bi bi-telegram"></i> Подписаться
+                </a>
+                <button class="btn btn-outline-secondary" id="theme-toggle">
+                    <i class="bi bi-moon-stars"></i> Тема
+                </button>
+            </div>
+        </section>
+    </main>
 
-<!-- Подвал -->
-<footer>
-    <div class="container">
-        <p class="mb-0">© 2025 FStudio. Все права защищены.</p>
-    </div>
-</footer>
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">© 2025 FStudio. Все права защищены.</p>
+        </div>
+    </footer>
 
     <!-- Скрипты -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        // Загрузка проектов из массива
+        const projects = [
+            {
+                title: "Voice Game (Rb)",
+                description: "Играйте, общайтесь, развлекайтесь.",
+                image: "https://tr.rbxcdn.com/180DAY-b48c003e7a60b6794ea1e122faa86789/768/432/Image/Webp/noFilter",
+                link: "https://www.roblox.com/games/10095591734/Voice-Game"
+            },
+            {
+                title: "Дом с геранью",
+                description: "Мистическая история о времени, выборе и тенях прошлого.",
+                image: "https://via.placeholder.com/768x432",
+                link: "#"
+            }
+        ];
+
+        function loadProjects() {
+            const container = document.getElementById('projects-container');
+            projects.forEach(project => {
+                const col = document.createElement('div');
+                col.className = 'col';
+                col.innerHTML = `
+                    <div class="project-card">
+                        <img src="${project.image}" alt="${project.title}">
+                        <div class="p-4">
+                            <h5>${project.title}</h5>
+                            <p>${project.description}</p>
+                            <a href="${project.link}" class="btn btn-apple">
+                                <i class="bi bi-telegram"></i> Играть
+                            </a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+        }
+
+        // Переключение темы
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+
+        // Инициализация
+        window.addEventListener('DOMContentLoaded', () => {
+            loadProjects();
+        });
+    </script>
 </body>
 </html>
