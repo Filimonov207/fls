@@ -84,3 +84,25 @@ footer {
     font-size: 0.9rem;
     color: #6e6e73;
 }
+
+/* Темная тема */
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme header {
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.dark-theme .project-card {
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.dark-theme .description-section {
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.dark-theme footer {
+    background-color: rgba(30, 30, 30, 0.8);
+}
